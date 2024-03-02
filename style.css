@@ -5,7 +5,11 @@
 }
 
 body {
-    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
     padding: 20px;
 }
 
@@ -19,7 +23,6 @@ body {
     display: flex;
     align-items: center;
     padding: 20px;
-    gap: 400px;
 }
 
 .logo-container {
@@ -117,3 +120,96 @@ footer {
         margin: 10px 0;
     }
 }
+
+
+/*!* Header styles *!*/
+/*.header-container {*/
+/*    background-color: #fff; !* White background for header *!*/
+/*    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+/*    position: sticky;*/
+/*    top: 0;*/
+/*    z-index: 1000;*/
+/*}*/
+
+/*.row-menu-inner {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: space-between; !* Adjusted for better spacing *!*/
+/*    padding: 1rem 2rem; !* More padding for a larger clickable area *!*/
+/*}*/
+
+/*.logo-container a {*/
+/*    display: block;*/
+/*}*/
+
+/*.img-container img {*/
+/*    width: auto; !* Keep original logo aspect ratio *!*/
+/*    height: 50px; !* Increased logo size for visibility *!*/
+/*}*/
+
+/*!* Navigation styles *!*/
+/*.nav {*/
+/*    display: flex;*/
+/*    list-style-type: none;*/
+/*}*/
+
+/*.nav a {*/
+/*    color: #2C73DB; !* Secondary color from logo for links *!*/
+/*    text-decoration: none;*/
+/*    padding: 0.5rem 1rem;*/
+/*    transition: color 0.3s ease;*/
+/*}*/
+
+/*.nav a:hover {*/
+/*    color: darken(#2C73DB, 10%); !* Darker blue on hover *!*/
+/*}*/
+
+/*!* Main content styles *!*/
+/*main {*/
+/*    background-color: #ffffff; !* White background for main content *!*/
+/*    margin: 20px 0;*/
+/*    padding: 20px;*/
+/*    box-shadow: 0 2px 5px rgba(0,0,0,0.1);*/
+/*}*/
+
+/*h1, h2 {*/
+/*    color: #2C73DB; !* Secondary color from logo for headings *!*/
+/*}*/
+
+/*!* List styles *!*/
+/*ul {*/
+/*    list-style-type: none;*/
+/*    padding: 0;*/
+/*}*/
+
+/*li {*/
+/*    margin-bottom: 10px;*/
+/*    padding-left: 1.5rem; !* For better text alignment *!*/
+/*}*/
+
+/*!* Contact and footer styles *!*/
+/*footer {*/
+/*    text-align: center;*/
+/*    padding: 20px;*/
+/*    background-color: #000000; !* Primary color from logo for footer *!*/
+/*    color: #ffffff; !* White text color for footer *!*/
+/*}*/
+
+/*!* Responsive styles *!*/
+/*@media (max-width: 768px) {*/
+/*    .row-menu-inner {*/
+/*        flex-direction: column;*/
+/*        gap: 0;*/
+/*    }*/
+
+/*    .nav {*/
+/*        flex-direction: column;*/
+/*        align-items: center;*/
+/*        margin-top: 1rem;*/
+/*    }*/
+
+/*    .nav a {*/
+/*        width: 100%;*/
+/*        text-align: center;*/
+/*    }*/
+/*}*/
