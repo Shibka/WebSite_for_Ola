@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
-    padding: 20px;
+    /*padding: 20px;*/ /* Consider making without padding body padding, but implement padding for every element but header */
 }
 
 
@@ -22,16 +22,28 @@ body {
 .row-menu-inner {
     display: flex;
     align-items: center;
-    padding: 20px;
+    justify-content: space-between; /* Add this to space out logo and nav */
+    padding: 5px 30px 5px 30px;
 }
 
 .logo-container {
-    justify-content: flex-start;
+    flex: 0 1 auto; /* Do not grow, allow shrinking, base width auto */
+}
+
+.nav-elements-container {
+    flex: 1; /* Grow to fill available space */
+    display: flex; /* Make it a flex container */
+    justify-content: center; /* Center its children */
+}
+.navbar {
+    display: flex;
+    justify-content: center;
 }
 
 .img-container img {
-    width: 100%;
-    height: 25px;
+    width: auto; /* Adjust based on your preference or keep it auto */
+    height: 80px; /* Increase height as needed */
+    max-width: 100%;
 }
 
 .img-responsive {
@@ -46,7 +58,11 @@ body {
     height: 100%;
 }
 
-
+nav{
+    display: flex;
+    justify-content: center; /* Additional centering for nav links */
+    gap: 85px;
+}
 nav a {
     position: relative;
     color: #403F3D;
@@ -58,7 +74,6 @@ nav a {
     text-align: center;
 
 }
-
 nav a:after {
     content: '';
     margin: 0 auto;
@@ -79,10 +94,10 @@ nav a:hover::after {
 
 
 main {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     margin: 20px 0;
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
 }
 
 h1, h2 {
@@ -108,16 +123,15 @@ footer {
 @media (max-width: 768px) {
     .row-menu-inner {
         flex-direction: column;
-        gap: 0
     }
 
-    nav {
-        margin-top: 20px;
+    .nav-elements-container, .navbar, nav {
+        width: 100%; /* Ensures full width for smaller screens */
+        justify-content: center; /* Keeps content centered */
     }
 
     nav a {
-        display: block;
-        margin: 10px 0;
+        text-align: center; /* Centers the links text */
     }
 }
 
