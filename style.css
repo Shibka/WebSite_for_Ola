@@ -88,13 +88,14 @@ nav a {
     color: #403F3D;
     text-decoration: none;
     margin: 0 15px;
-    color:rgba(255, 255, 255, 1);
-    font-family:Roboto sans-serif;
-    text-align:left;
-    font-size:15px;
-    letter-spacing:0;
+    color: rgba(255, 255, 255, 1);
+    font-family: Roboto sans-serif;
+    text-align: left;
+    font-size: 15px;
+    letter-spacing: 0;
 
 }
+
 .nav-elements-container {
     position: relative; /* Establish a positioning context for the pseudo-element */
 }
@@ -114,13 +115,13 @@ nav a {
 }
 
 
-
 main {
     /*background-color: #ffffff;*/
     /*padding: 40px;*/
     /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
 }
-.main-headline{
+
+.main-headline {
     padding-top: 100px;
     padding-bottom: 50px;
     display: flex;
@@ -129,31 +130,53 @@ main {
     align-items: center; /* Center vertically */
     text-align: center; /* Center the text */
 }
-.main-title{
-    color:rgba(255, 255, 255, 1);
+
+.main-title {
+    color: rgba(255, 255, 255, 1);
     /*font-family:Asket;*/
-    font-size:100px;
-    letter-spacing:0;
+    font-size: 100px;
+    letter-spacing: 0;
 }
-.main-headline-img {
+
+.main-headline-img-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.main-headline-img-main {
     width: 100%; /* Full width of the viewport */
-    height: 346px; /* Fixed height */
-
+    height: 380px; /* Adjust based on your design preference */
+    overflow: hidden; /* Ensures no part of the image spills out */
+    margin-bottom: 100px;
 }
 
-.main-headline-img img {
+.main-headline-img-main img {
     width: 100%; /* Full width of the container */
-    height: 10%; /* Full height of the container */
+    height: 380px; /* Full height of the container */
     object-fit: cover; /* Ensure the whole image fits inside */
+    object-position: 50% 38%;
 }
-.main-headline p{
-    color:rgba(255, 255, 255, 1);
-    width:504px;
-    height:42px;
-    font-family:Roboto;
-    text-align:center;
-    font-size:18px;
-    letter-spacing:0;
+.main-headline-img-rectangle {
+    position: absolute;
+    bottom: -100%; /* Adjust this value to control the overlap */
+    left: -100px;
+    width: 50%; /* Adjust if you want a different width */
+    height: auto;
+}
+
+.main-headline-img-rectangle img {
+    width: 100%;
+    height: auto;
+}
+
+.main-headline p {
+    color: rgba(255, 255, 255, 1);
+    width: 504px;
+    height: 42px;
+    font-family: Roboto;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0;
 }
 
 .services-container {
