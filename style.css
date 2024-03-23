@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Asket';
+    src: url('./fonts/asket.extrabold.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -85,14 +90,14 @@ nav {
 
 nav a {
     position: relative;
-    color: #403F3D;
     text-decoration: none;
     margin: 0 15px;
     color: rgba(255, 255, 255, 1);
-    font-family: Roboto sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     text-align: left;
     font-size: 15px;
-    letter-spacing: 0;
 
 }
 
@@ -133,35 +138,40 @@ main {
 
 .main-title {
     color: rgba(255, 255, 255, 1);
-    /*font-family:Asket;*/
+    font-family:'Asket', sans-serif;
     font-size: 100px;
+    font-weight: 900;
     letter-spacing: 0;
 }
 
 .main-headline-img-wrapper {
     position: relative;
     width: 100%;
+    margin-bottom: 120px;
 }
 
 .main-headline-img-main {
     width: 100%; /* Full width of the viewport */
     height: 380px; /* Adjust based on your design preference */
     overflow: hidden; /* Ensures no part of the image spills out */
-    margin-bottom: 100px;
+    position: relative;
+    z-index: 2;
+    opacity: 0.8
 }
 
 .main-headline-img-main img {
     width: 100%; /* Full width of the container */
-    height: 380px; /* Full height of the container */
+    height: 390px; /* Full height of the container */
     object-fit: cover; /* Ensure the whole image fits inside */
     object-position: 50% 38%;
 }
 .main-headline-img-rectangle {
     position: absolute;
-    bottom: -100%; /* Adjust this value to control the overlap */
-    left: -100px;
-    width: 50%; /* Adjust if you want a different width */
-    height: auto;
+    bottom: -93%; /* Example of using viewport height to keep relative positioning responsive */
+    left: -20vw; /* Adjust based on the design's responsiveness needs */
+    width: 50%; /* Keeps width responsive */
+    height: auto; /* Keeps height based on the image's aspect ratio */
+    z-index: 1;
 }
 
 .main-headline-img-rectangle img {
@@ -173,12 +183,76 @@ main {
     color: rgba(255, 255, 255, 1);
     width: 504px;
     height: 42px;
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
     text-align: center;
     font-size: 18px;
     letter-spacing: 0;
 }
+#about{
+    position: relative;
+    padding-bottom: 50px;
+}
+#about::after {
+    content: '';
+    position: absolute;
+    left: 0; /* Align to the left edge of the container */
+    right: 0; /* Align to the right edge of the container */
+    bottom: 0; /* Position at the bottom of the container */
+    height: 1px; /* Height of the line */
+    background: #FFFFFF; /* Color of the line */
+    width: 70%; /* Adjust the width as needed */
+    margin-left: auto; /* Center the pseudo-element horizontally */
+    margin-right: auto; /* Center the pseudo-element horizontally */
+}
 
+#about h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Asket', sans-serif;
+    text-align:center;
+    font-size:90px;
+    padding-bottom: 20px;
+    letter-spacing: -3px;
+    -webkit-text-stroke: 3px #FFFFFF; /* Define the width and color of the outline */
+    color: transparent;
+}
+.about-text-container {
+    display: flex;
+    justify-content: space-around; /* Evenly spaces the children with space around them */
+    align-items: center; /* Align children vertically */
+    text-align: left; /* Align the text to the left */
+    margin: 0 auto; /* Center the container */
+    max-width: 1032px; /* Limit the maximum width */
+    gap: 80px; /* Provides space between items when they wrap */
+}
+
+.about-text-container > div:first-child {
+    color:rgba(255, 255, 255, 1);
+    width:440px;
+    height:auto;
+    line-height: 1.2;
+    font-family: 'Asket', sans-serif;
+    text-align:left;
+    font-size:25px;
+}
+
+.about-text-container > div:last-child {
+    color:rgba(255, 255, 255, 1);
+    max-width:495px;
+    height:auto;
+    font-family: "Roboto", sans-serif;
+    text-align:left;
+    font-size:18px;
+    line-height: 1.2;
+    font-weight: lighter;
+    font-style: normal;
+}
+
+
+#services{
+    padding-top: 1000px;
+}
 .services-container {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
