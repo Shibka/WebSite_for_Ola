@@ -40,6 +40,20 @@ body {
     margin-right: -20px;
 }
 
+.logo-link {
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Keeps text color consistent */
+    display: block; /* Makes the link block-level to contain the div */
+}
+
+.logo-link:hover .logo-container {
+    transform: scale(1.05); /* Zooms in the logo a little */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+    cursor: pointer; /* Changes cursor to indicate clickable item */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for zoom and shadow */
+}
+
+
 .logo {
     display: flex; /* This will apply flex properties to children of logo and logo-text */
     align-items: center; /* Center children vertically */
@@ -98,7 +112,10 @@ nav a {
     font-style: normal;
     text-align: left;
     font-size: 15px;
+}
 
+.nav a:hover {
+    font-weight: bold;
 }
 
 .nav-elements-container {
@@ -293,7 +310,7 @@ main {
 
 }
 
-.service-item:hover{
+.service-item:hover {
     transform: scale(1.05); /* Optional: zoom effect on hover */
 }
 
@@ -307,14 +324,14 @@ main {
 
 .overlay-text {
     position: absolute;
-    font-family:"Roboto", sans-serif;;
-    text-align:left;
-    font-size:18px;
+    font-family: "Roboto", sans-serif;;
+    text-align: left;
+    font-size: 18px;
     top: 50%; /* Center vertically */
     left: 35%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Adjust positioning */
     color: #FDFDFD;
-    letter-spacing:0;
+    letter-spacing: 0;
     line-height: 22px;
     font-weight: 300;
     padding: 5px; /* Add padding to the text for better readability */
