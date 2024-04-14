@@ -17,7 +17,6 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: #333;
     background-color: #005ADD;
 }
 
@@ -135,7 +134,10 @@ nav a {
     margin-right: auto; /* Center the pseudo-element horizontally */
     color: rgb(255, 255, 255, 1);
 }
-
+.language-toggle a{
+    color: rgb(255, 255, 255, 1);
+    text-decoration: none;
+}
 
 main {
     /*background-color: #ffffff;*/
@@ -325,7 +327,7 @@ main {
     transition: transform 0.3s ease;
 }
 
-.services-motto{
+.services-motto {
     margin-top: 40px;
     display: flex;
     justify-content: center;
@@ -337,7 +339,8 @@ main {
     border: 1px solid black;
     border-radius: 25px;
 }
-.services-motto p{
+
+.services-motto p {
     padding: 20px;
 }
 
@@ -389,7 +392,40 @@ footer {
     gap: 100px;
 }
 
-.contact-info-container > div:first-child {
+.contact-documents {
+    display: flex;
+    color: white;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+
+
+.download-button{
+    padding: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: auto;
+    color: white;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    background-color: inherit;
+    border: 1px solid white;
+}
+
+.download-button:hover {
+    background-color: white; /* Change to the text's original color */
+    color: #007BFF; /* Change to the background's original color */
+    cursor: pointer;
+}
+
+
+.contact-email-info {
     color: rgba(255, 255, 255, 1);
     max-width: 495px;
     height: auto;
@@ -401,7 +437,13 @@ footer {
     font-style: normal;
 }
 
-.contact-info-container > div:last-child {
+.contact-email-info span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.container-company-address {
     color: rgba(255, 255, 255, 1);
     max-width: 400px;
     height: auto;
@@ -413,15 +455,16 @@ footer {
     font-style: normal;
 }
 
-.contact-info-container > div:first-child a {
+.contact-email-info a {
     color: inherit; /* Removes the default blue color. Makes the link use the text color of its parent */
-    text-decoration: underline;
+    text-decoration: none;
 }
 
-.contact-info-container > div:first-child span {
-    font-size: 20px;
-    font-weight: bold;
+.contact-email-info a:hover{
+    text-decoration: underline;
+    cursor: pointer; /* Changes cursor to indicate clickable item */
 }
+
 
 
 @media (max-width: 768px) {
