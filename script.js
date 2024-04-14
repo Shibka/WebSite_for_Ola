@@ -1,3 +1,3 @@
-let a = "itpartnersalesmanager@gmail.com"
+let a = "Мы постоянно совершенствуемся и ищем новые возможности для роста и развития!"
 let b = a.toUpperCase()
 console.log(b)
