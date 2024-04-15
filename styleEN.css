@@ -134,13 +134,12 @@ nav a {
     margin-right: auto; /* Center the pseudo-element horizontally */
     color: rgb(255, 255, 255, 1);
 }
-
-.language-toggle a {
+.language-toggle a{
     color: rgb(255, 255, 255, 1);
     text-decoration: none;
 }
 
-.language-toggle a:hover {
+.language-toggle a:hover{
     font-weight: 900;
     cursor: pointer;
 }
@@ -267,7 +266,7 @@ main {
     line-height: 1.2;
     font-family: 'Asket', sans-serif;
     text-align: left;
-    font-size: 22px;
+    font-size: 21px;
 }
 
 .about-text-container > div:last-child {
@@ -406,7 +405,8 @@ footer {
 }
 
 
-.download-button {
+
+.download-button{
     padding: 5px;
     justify-content: center;
     display: flex;
@@ -465,10 +465,11 @@ footer {
     text-decoration: none;
 }
 
-.contact-email-info a:hover {
+.contact-email-info a:hover{
     text-decoration: underline;
     cursor: pointer; /* Changes cursor to indicate clickable item */
 }
+
 
 
 @media (max-width: 768px) {
