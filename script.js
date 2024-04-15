@@ -5,14 +5,18 @@ console.log(b)
 
 
 function switchLanguage() {
-    const currentLang = document.getElementById('lang-switch').textContent;
+    const langSwitchElement = document.getElementById('lang-switch');
+    const currentLang = langSwitchElement.textContent;
+
     if (currentLang === 'EN') {
-        // Logic to switch to English
-        window.location.href = './indexEN.html'; // Adjust URL if using subdirectories
-        document.getElementById('lang-switch').textContent = 'RU';
+        // Change to English version
+        window.location.href = 'EN.html';  // Assuming file naming
+        langSwitchElement.textContent = 'RU';
+        localStorage.setItem('preferredLanguage', 'EN');  // Store preference
     } else {
-        // Logic to switch to Russian
-        window.location.href = './index.html'; // Adjust URL for default language
-        document.getElementById('lang-switch').textContent = 'EN';
+        // Change to Russian version
+        window.location.href = 'RU.html';
+        langSwitchElement.textContent = 'EN';
+        localStorage.setItem('preferredLanguage', 'RU');  // Store preference
     }
 }
