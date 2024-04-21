@@ -15,7 +15,7 @@ function switchLanguage() {
         localStorage.setItem('preferredLanguage', 'EN');  // Store preference
     } else {
         // Change to Russian version
-        window.location.href = 'index.html';
+        window.location.href = './index.html';
         langSwitchElement.textContent = 'EN';
         localStorage.setItem('preferredLanguage', 'RU');  // Store preference
     }
