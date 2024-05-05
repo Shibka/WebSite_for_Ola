@@ -1,6 +1,3 @@
-let a = "WE ARE CONSTANTLY IMPROVING AND LOOKING FOR NEW OPPORTUNITIES FOR GROWTH AND DEVELOPMENT!"
-let b = a.toUpperCase()
-console.log(b)
 
 
 
