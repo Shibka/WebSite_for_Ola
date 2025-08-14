@@ -1,2 +1,4 @@
 /ru /index.html 200!
 / /ru/ 301
+/en /EN.html 200!
+/en/ /EN.html 200!
