@@ -472,6 +472,34 @@ footer {
 
 
 @media (max-width: 768px) {
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+    .main-headline-img-wrapper {
+        position: relative;
+        width: 100%;
+        margin-bottom: 120px;
+    }
+
+    .main-headline-img-main {
+        width: 100%; /* Full width of the viewport */
+        height: 380px; /* Adjust based on your design preference */
+        overflow: hidden; /* Ensures no part of the image spills out */
+        position: relative;
+        z-index: 2;
+        opacity: 0.8
+    }
+
+    .main-headline-img-main img {
+        width: 100%; /* Full width of the container */
+        height: 390px; /* Full height of the container */
+        object-fit: cover; /* Ensure the whole image fits inside */
+        object-position: 50% 38%;
+    }
+
     .row-menu-inner {
         flex-direction: column;
     }
@@ -487,5 +515,23 @@ footer {
 
     .services-container {
         grid-template-columns: 1fr; /* Stack the blocks in a single column on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        flex-direction: column;
+    }
+
+    .main-headline-img-main {
+        height: 200px;
+    }
+
+    .main-headline-img-rectangle {
+        display: none;
+    }
+
+    .download-button {
+        font-size: 10px;
     }
 }
