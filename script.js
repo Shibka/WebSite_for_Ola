@@ -25,4 +25,22 @@ document.addEventListener('DOMContentLoaded', function () {
             } catch (e) {}
         });
     }
+
+    // Close mobile menu on nav link click
+    var nav = document.querySelector('nav');
+    if (nav) {
+        nav.addEventListener('click', function (e) {
+            var target = e.target;
+            if (target && target.tagName === 'A') {
+                document.body.classList.remove('mobile-nav-open');
+            }
+        });
+    }
+
+    // Close on Escape
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            document.body.classList.remove('mobile-nav-open');
+        }
+    });
 });
