@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     var toggle = document.getElementById('lang-switch');
-    var isEnglish = window.location.pathname.toLowerCase().includes('en.html');
+    var isEnglish = (document.documentElement.getAttribute('lang') || '').toLowerCase().indexOf('en') === 0;
 
     var saved = null;
     try {
@@ -9,13 +9,23 @@ document.addEventListener('DOMContentLoaded', function () {
         saved = null;
     }
 
-    if (saved === 'EN' && !isEnglish) {
-        window.location.replace('EN.html');
-        return;
-    }
-    if (saved === 'RU' && isEnglish) {
-        window.location.replace('./');
-        return;
+    // Only auto-redirect once per session to avoid loops
+    var redirected = false;
+    try {
+        redirected = sessionStorage.getItem('redirectedOnce') === '1';
+    } catch (e) {}
+
+    if (!redirected) {
+        if (saved === 'EN' && !isEnglish) {
+            try { sessionStorage.setItem('redirectedOnce', '1'); } catch (e) {}
+            window.location.replace('EN.html');
+            return;
+        }
+        if (saved === 'RU' && isEnglish) {
+            try { sessionStorage.setItem('redirectedOnce', '1'); } catch (e) {}
+            window.location.replace('./');
+            return;
+        }
     }
 
     if (toggle) {
